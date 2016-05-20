@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExpenseCategoryListCollectionViewCell" id="gTV-IL-0wX" customClass="ExpenseCategoryListCollectionViewCell" customModule="RTExpenses" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="203" height="166"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="203" height="166"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Dw-Op-mrV" userLabel="Expense Category Name Label">
+                        <rect key="frame" x="57" y="146" width="89" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkG-gX-qpv">
+                        <rect key="frame" x="13" y="58" width="118" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="       Add new category">
+                            <color key="titleColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="didTapAddNewExpenseCategoryButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="lIe-9X-HbQ"/>
+                        </connections>
+                    </button>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus Filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="aVp-wR-KIg" userLabel="Add new category Image View">
+                        <rect key="frame" x="8" y="71" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Cy1-oW-Bmx"/>
+                            <constraint firstAttribute="width" constant="25" id="NvJ-ns-k0m"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF9-Si-Lfb">
+                        <rect key="frame" x="173" y="5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="b5o-5W-bBX"/>
+                            <constraint firstAttribute="width" constant="25" id="kZa-fg-9Bg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <state key="normal" title="Plus Button" image="PlusButton"/>
+                        <connections>
+                            <action selector="didTapAddNewExpenseButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="h63-lt-u7c"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExepensePlaceHolder_converted" translatesAutoresizingMaskIntoConstraints="NO" id="iP6-k1-PNw">
+                        <rect key="frame" x="25" y="49" width="152" height="97"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.CornerRadius" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iP6-k1-PNw" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.6" constant="-2.5999999999999943" id="3Fz-yU-omj"/>
+                <constraint firstItem="5Dw-Op-mrV" firstAttribute="top" secondItem="iP6-k1-PNw" secondAttribute="bottom" id="5rw-Yt-E7z"/>
+                <constraint firstItem="iP6-k1-PNw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="6AF-1B-ZEp"/>
+                <constraint firstItem="ZkG-gX-qpv" firstAttribute="leading" secondItem="aVp-wR-KIg" secondAttribute="trailing" constant="-20" id="9xt-TF-Za2"/>
+                <constraint firstItem="yF9-Si-Lfb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="GNH-gE-LHf"/>
+                <constraint firstItem="ZkG-gX-qpv" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-4" id="MFM-qa-57T"/>
+                <constraint firstItem="ZkG-gX-qpv" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.3" id="Toy-9Q-F2J"/>
+                <constraint firstItem="5Dw-Op-mrV" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XbG-Aa-sFQ"/>
+                <constraint firstAttribute="trailing" secondItem="yF9-Si-Lfb" secondAttribute="trailing" constant="5" id="cZL-f3-CaG"/>
+                <constraint firstItem="iP6-k1-PNw" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.75" id="dBJ-Sw-HzS"/>
+                <constraint firstItem="aVp-wR-KIg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="dCN-ui-s7Y"/>
+                <constraint firstAttribute="bottom" secondItem="5Dw-Op-mrV" secondAttribute="bottom" constant="5" id="efx-GX-VEA"/>
+                <constraint firstItem="iP6-k1-PNw" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="eqn-qG-KdK"/>
+                <constraint firstItem="ZkG-gX-qpv" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="hNX-CL-8NL"/>
+                <constraint firstItem="aVp-wR-KIg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="s46-Yp-vWb"/>
+            </constraints>
+            <size key="customSize" width="203" height="166"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="MFM-qa-57T"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="addNewCategoryButtonImageView" destination="aVp-wR-KIg" id="lF9-rZ-GEE"/>
+                <outlet property="addNewExpenseButton" destination="yF9-Si-Lfb" id="8uL-cU-nnQ"/>
+                <outlet property="addNewExpenseCategoryButton" destination="ZkG-gX-qpv" id="XtR-Fl-1t9"/>
+                <outlet property="categoryIconImageView" destination="iP6-k1-PNw" id="QH6-9a-OVc"/>
+                <outlet property="expenseCategoryNameLabel" destination="5Dw-Op-mrV" id="5mu-iE-Q8T"/>
+            </connections>
+            <point key="canvasLocation" x="253.5" y="358"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ExepensePlaceHolder_converted" width="50" height="50"/>
+        <image name="Plus Filled-50" width="25" height="25"/>
+        <image name="PlusButton" width="25" height="25"/>
+    </resources>
+</document>
